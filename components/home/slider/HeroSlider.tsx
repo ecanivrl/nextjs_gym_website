@@ -106,7 +106,7 @@ const HeroSlider = () => {
       ))}
       {/* slider nav buttons */}
       <SliderNavButtons
-        containerStyles="relative lg:bottom-[280px] bottom-16 flex lg:justify-end justify-center w-full gap-2 z-50"
+        containerStyles="relative lg:bottom-[280px] bottom-16 flex lg:justify-end justify-center w-full gap-2 z-50 max-sm:hidden"
         buttonStyles="border border-accent text-white w-[56px] h-[56px] hover:bg-accent transition-all duration-300 flex justify-center items-center"
         iconStyles="text-white text-2xl"
       />
