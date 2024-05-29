@@ -85,7 +85,7 @@ const Achievements = () => {
                   >
                     {/* render the CountUp animation only the component is in view (isInView true) */}
                     {isInView && (
-                      <CountUp start={0} end={item.number} duration={3} />
+                      <CountUp start={0} end={item.number} duration={5} />
                     )}
                   </div>
                 </div>
