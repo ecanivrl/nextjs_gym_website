@@ -23,7 +23,7 @@ import { fadeIn } from '@/lib/variants';
 const sliderList = [
   {
     id: 1,
-    title: 'Where Hard',
+    title: 'GYM',
     subTitle: 'work meets success',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus',
@@ -39,7 +39,7 @@ const sliderList = [
   },
   {
     id: 3,
-    title: 'Branch',
+    title: 'GYM',
     subTitle: 'work meets success',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribu',
@@ -47,8 +47,8 @@ const sliderList = [
   },
   {
     id: 4,
-    title: 'Set',
-    subTitle: 'work  success',
+    title: 'GYM',
+    subTitle: 'work meets success',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus.',
     buttonText: 'Get Started',
@@ -78,7 +78,8 @@ const HeroSlider = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 className="h1 text-center lg:text-left mb-2"
               >
-                <span>{slider.title}</span> {slider.subTitle}
+                <span className="text-accent">{slider.title}</span>{' '}
+                {slider.subTitle}
               </motion.h1>
               <motion.p
                 variants={fadeIn('up', 0.4)}

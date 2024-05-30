@@ -18,7 +18,15 @@ const links = [
   { name: 'contact', target: 'contact', offset: 0 },
 ];
 
-const MobileNav = ({ containerStyles }: { containerStyles: string }) => {
+const MobileNav = ({
+  containerStyles,
+  openMenu,
+  setOpenMenu,
+}: {
+  containerStyles: string;
+  openMenu: boolean;
+  setOpenMenu: (openMenu: boolean) => void;
+}) => {
   const isMobile = useMediaQuery({ query: '(max-width: 640px)' });
 
   return (
@@ -34,6 +42,7 @@ const MobileNav = ({ containerStyles }: { containerStyles: string }) => {
             activeClass={`${isMobile && 'active'}`}
             duration={500}
             className=" hover:text-accent transition-all cursor-pointer"
+            onClick={() => setOpenMenu(false)}
           >
             <motion.p
               variants={fadeIn('up', 0.1 * index)}

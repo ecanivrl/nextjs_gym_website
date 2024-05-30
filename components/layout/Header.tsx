@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { MdMenu } from 'react-icons/md';
+import Logo from './Logo';
 
 const Header = () => {
   const [headerActive, setHeaderActive] = useState(false);
@@ -48,17 +49,11 @@ const Header = () => {
     >
       <div className="container mx-auto h-full flex justify-between items-center">
         {/* Logo */}
-        <Link href={'#home'}>
-          <Image
-            src="/assets/img/logo.png"
-            width={117}
-            height={55}
-            alt="logo"
-            className="cursor-pointer"
-          />
-        </Link>
+        <Logo />
         {/* mobile nav - visible on small devices */}
         <MobileNav
+          openMenu={openMenu}
+          setOpenMenu={setOpenMenu}
           containerStyles={`
         ${
           headerActive ? 'top-[90px]' : 'top-[124px]'
@@ -77,7 +72,7 @@ const Header = () => {
         {/* hide open menu button */}
         <div className="flex items-center gap-5">
           {/* login & register buttons */}
-          <div className="text-white flex items-center gap-4">
+          <div className="text-white flex items-center gap-2 max-sm:hidden">
             <button className="hover:text-accent transition-all text-base font-medium uppercase">
               Login
             </button>
@@ -89,7 +84,7 @@ const Header = () => {
             onClick={() => setOpenMenu(!openMenu)}
             className="text-white xl:hidden"
           >
-            <MdMenu className="text-4xl" />
+            <MdMenu className="text-3xl" />
           </button>
         </div>
       </div>
